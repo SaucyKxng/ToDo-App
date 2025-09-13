@@ -1,0 +1,101 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f7f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #fbbc04;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #202124;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#addBtn {
+  background: #34a853;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#addBtn:hover {
+  background: #2c8c45;
+}
+
+/* Task list grid */
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Task card */
+.task {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.task:hover {
+  transform: scale(1.03);
+}
+
+.task.completed {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+/* Task actions */
+.task button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1rem;
+  color: #d93025;
+}
+
+.task button:hover {
+  color: black;
+}
